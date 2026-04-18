@@ -1504,8 +1504,8 @@ align-items: center;
     }
 
     section {
-        margin-top: 40px;
-        padding: 0 16px;
+        padding: 32px 16px;
+        margin-top: 32px;
     }
 
     h1, h2, h3 {
@@ -1518,6 +1518,7 @@ align-items: center;
         font-size: 15px;
         line-height: 1.5;
         text-align: center;
+        max-width: 90%;
     }
 
     img {
@@ -1530,96 +1531,70 @@ align-items: center;
        NAVIGATION
     ------------------------- */
     .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 20px;
+        padding: 10px 0;
     }
 
     .nav-inner {
-        gap: 18px;
+        gap: 22px;
+        padding: 0 12px;
     }
 
     .navbar a {
-        font-size: 14px;
-        margin: 0 6px;
+        font-size: 0.95rem;
     }
 
     /* -------------------------
-       HERO SECTIONS
+       HERO
     ------------------------- */
     .hero {
-        padding: 40px 16px;
+        padding: 80px 16px 40px;
         text-align: center;
     }
 
-    .hero h1 {
-        font-size: 32px;
+    .hero-content h1 {
+        font-size: 2.4rem;
     }
 
-    .hero p {
-        font-size: 16px;
-        margin-top: 12px;
+    .hero-content p {
+        font-size: 1.05rem;
+        margin-top: -10px;
     }
 
     /* -------------------------
-       SERVICES PAGE
+       SERVICES
     ------------------------- */
     .services-grid,
     .services-grid-home {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 24px;
-    }
-
-    .service-block {
-        padding: 20px;
-        text-align: center;
     }
 
     /* -------------------------
        ABOUT PAGE
     ------------------------- */
-    .about-wrapper,
-    .about-container {
-        display: flex;
+    .about-wrapper {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        gap: 24px;
+        gap: 32px;
     }
 
     .about-photo,
     .about-image {
-        width: 70%;
-        max-width: 260px;
-        border-radius: 12px;
-    }
-
-    .about-text {
-        padding: 0 10px;
-        max-width: 100%;
+        width: 220px;
+        height: 220px;
     }
 
     /* -------------------------
        CONTACT PAGE
     ------------------------- */
     .contact-wrapper {
+        padding: 20px;
         margin-top: 60px;
-        padding: 0 16px;
     }
 
-    form input,
-    form textarea {
+    .contact-info,
+    .contact-form {
         width: 100%;
-        font-size: 16px;
-        padding: 12px;
-        margin-bottom: 16px;
-    }
-
-    form button {
-        width: 100%;
-        padding: 14px 0;
     }
 
     /* -------------------------
@@ -1631,24 +1606,11 @@ align-items: center;
     }
 
     .personal-card {
-        width: 100%;
-        padding: 20px;
         aspect-ratio: 4 / 5;
     }
 
-    .personal-title {
-        font-size: 1.4rem;
-        text-align: center;
-    }
-
-    .personal-story {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
     /* -------------------------
-       PORTFOLIO PAGE — FIXED
-       (THIS IS THE IMPORTANT PART)
+       PORTFOLIO — FIXED
     ------------------------- */
 
     /* Force vertical stacking */
@@ -1658,13 +1620,15 @@ align-items: center;
         align-items: center;
         width: 100%;
         text-align: center;
-        margin-bottom: 32px;
+        margin-bottom: 40px;
     }
 
-    /* Image sits above text */
+    /* Fix disappearing images */
     .portfolio-img {
         width: 100%;
+        height: auto;
         margin-bottom: 20px;
+        overflow: visible;
     }
 
     .portfolio-img img {
@@ -1692,7 +1656,6 @@ align-items: center;
         line-height: 1.5;
     }
 
-    /* Button becomes full-width block */
     .project-btn {
         display: block;
         width: 100%;
@@ -1705,12 +1668,12 @@ align-items: center;
     .portfolio-grid {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 32px;
         width: 100%;
     }
 
     /* -------------------------
-       SLIDESHOWS / BANNERS
+       SLIDESHOW / BANNERS
     ------------------------- */
     .slideshow-container {
         height: 240px;
@@ -1735,49 +1698,4 @@ align-items: center;
         width: 90%;
     }
 }
-/* ============================================================
-   FINAL OVERRIDE — FIX TEXT/BUTTON OVER IMAGE ON MOBILE
-   ============================================================ */
-@media (max-width: 768px) {
 
-    .portfolio-card {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-        text-align: center !important;
-        position: relative !important;
-    }
-
-    .portfolio-img {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-        height: auto !important;
-        position: relative !important;
-    }
-
-    .portfolio-img img {
-        width: 100% !important;
-        height: auto !important;
-        display: block !important;
-        position: relative !important;
-    }
-
-    .portfolio-info {
-        width: 100% !important;
-        padding: 0 12px !important;
-        margin-top: 10px !important;
-        position: relative !important;
-        z-index: 10 !important;
-    }
-
-    .project-btn {
-        display: block !important;
-        width: 100% !important;
-        margin-top: 16px !important;
-        padding: 14px 0 !important;
-        text-align: center !important;
-        position: relative !important;
-        z-index: 10 !important;
-    }
-}
