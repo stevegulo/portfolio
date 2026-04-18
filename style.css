@@ -1491,3 +1491,192 @@ align-items: center;
   font-size: 1.65rem;       /* slightly larger */
   letter-spacing: 0.04em;  /* subtle editorial polish */
 }
+/* -----------------------------------
+   MOBILE RESPONSIVE FIXES
+   (max-width: 768px)
+----------------------------------- */
+@media (max-width: 768px) {
+
+  /* Global spacing */
+  section {
+    padding: 40px 18px;
+  }
+
+  /* NAV */
+  .nav-inner {
+    gap: 22px;
+    padding: 0 12px;
+  }
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  /* HERO */
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1.05rem;
+    margin-top: -10px;
+  }
+
+  /* PROJECT CARDS */
+  .project-card {
+    max-width: 100%;
+  }
+  .project-image {
+    padding-top: 55%; /* taller for mobile */
+  }
+
+  /* SERVICES GRID */
+  .services-grid,
+  .services-grid-home {
+    grid-template-columns: 1fr;
+  }
+
+  /* ABOUT PAGE */
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    max-width: 100%;
+  }
+  .about-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-wrapper {
+    padding: 20px;
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  /* PORTFOLIO CARDS */
+  .portfolio-card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .portfolio-img {
+    width: 100%;
+    height: 260px;
+  }
+  .portfolio-info {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* PERSONAL GRID */
+  .personal-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .personal-card {
+    aspect-ratio: 4 / 5; /* more natural for phones */
+  }
+  .personal-title {
+    font-size: 1.4rem;
+  }
+  .personal-story {
+    font-size: 0.9rem;
+  }
+
+  /* EM LAYOUT */
+  .em-grid {
+    flex-direction: column;
+  }
+  .em-card.half {
+    width: 100%;
+  }
+
+  /* RELIC GRID */
+  .relic-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .relic-split {
+    grid-template-columns: 1fr;
+  }
+
+  /* PIZZA GRID */
+  .pizza-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* HARLEY GRID */
+  .harley-grid,
+  .harley-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* SLIDESHOW */
+  .slideshow-container {
+    height: 240px;
+  }
+
+  /* BANNERS */
+  .banner-item {
+    max-width: 100%;
+  }
+
+  /* CANNA GRID */
+  .canna {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .thumb {
+    width: 90%;
+  }
+}
+/* -----------------------------------
+   PORTFOLIO PAGE — MOBILE FIX
+----------------------------------- */
+@media (max-width: 768px) {
+
+  /* Stack cards vertically */
+  .portfolio-card {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Image becomes full-width and shorter */
+  .portfolio-img {
+    width: 100%;
+    height: 240px; /* perfect for mobile */
+    background-position: center;
+  }
+
+  /* Info block becomes full-width */
+  .portfolio-info {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Typography adjustments */
+  .portfolio-info h3 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .portfolio-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Portfolio grid (if used on this page) */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .portfolio-grid .portfolio-img {
+    height: 200px;
+  }
+}
