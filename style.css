@@ -1519,6 +1519,8 @@ align-items: center;
         line-height: 1.5;
         text-align: center;
         max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     img {
@@ -1610,11 +1612,12 @@ align-items: center;
     }
 
     /* -------------------------
-       PORTFOLIO — FIXED
+       PORTFOLIO + INDEX CARDS — FIXED
     ------------------------- */
 
     /* Force vertical stacking */
-    .portfolio-card {
+    .portfolio-card,
+    .project-card {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1623,22 +1626,30 @@ align-items: center;
         margin-bottom: 40px;
     }
 
-    /* Fix disappearing images */
-    .portfolio-img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-        overflow: visible;
-    }
+    /* FIX: override desktop image container completely */
+.portfolio-img,
+.project-image,
+.portfolio-card .project-image {
+    width: 100%;
+    height: 260px; /* or 300px if you want taller */
+    margin-bottom: 20px;
+    overflow: visible;
+    background-size: cover !important;
+    background-position: center !important;
+    padding-top: 0 !important;
+    display: block;
+}
 
-    .portfolio-img img {
+	.portfolio-img img,
+    .project-image img {
         width: 100%;
         height: auto;
         display: block;
     }
 
-    /* Text + button stay below image */
-    .portfolio-info {
+    /* Text + button */
+    .portfolio-info,
+    .project-info {
         width: 100%;
         padding: 0 12px;
         margin-top: 10px;
@@ -1646,17 +1657,20 @@ align-items: center;
         z-index: 2;
     }
 
-    .portfolio-info h3 {
+    .portfolio-info h3,
+    .project-info h3 {
         font-size: 1.4rem;
         line-height: 1.3;
     }
 
-    .portfolio-info p {
+    .portfolio-info p,
+    .project-info p {
         font-size: 0.95rem;
         line-height: 1.5;
     }
 
-    .project-btn {
+    .project-btn,
+    .portfolio-btn {
         display: block;
         width: 100%;
         margin-top: 16px;
@@ -1698,4 +1712,3 @@ align-items: center;
         width: 90%;
     }
 }
-
