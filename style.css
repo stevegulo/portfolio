@@ -1740,3 +1740,31 @@ align-items: center;
         padding: 0 10px;
     }
 }
+/* ⭐ MOBILE FIX FOR ALL PORTFOLIO CARDS ⭐ */
+@media (max-width: 768px) {
+
+    .portfolio-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .portfolio-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolio-img img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .portfolio-info {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
